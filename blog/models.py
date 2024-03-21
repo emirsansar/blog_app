@@ -25,7 +25,7 @@ class Blog(models.Model):
     is_active = models.BooleanField(null=True)
     is_home = models.BooleanField(null=True)
     slug = models.SlugField(null=False, blank=True, unique=True, db_index=True, editable=False)
-    category = models.ForeignKey('Category', default=2, on_delete=models.CASCADE)
+    categories = models.ManyToManyField(Category, blank=True)
 
     def __str__(self):
         return f"{self.title}"
