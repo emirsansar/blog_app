@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block title %} {% endblock %} | BlogApp </title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <link rel ="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css_files %} {% endblock %}
+</head>
+<body>
+
+    {% include 'partials/_navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    {% block js_files %} {% endblock %}
+</body>
+</html>
