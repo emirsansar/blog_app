@@ -1,15 +1,20 @@
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title> {% block title %} {% endblock %} | BlogApp </title>
+    <title> {% block title %} {% endblock %} | DevSepak </title>
 
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 
     <link rel ="stylesheet" href="{% static 'css/base.css' %}">
     {% block css_files %} {% endblock %}
+
+    <style>
+        body {
+            background-color: #f0f0f0; 
+        }
+    </style>
 </head>
 <body>
 
